@@ -63,6 +63,11 @@ img {
 .social {
     min-height: 100vh;
     padding: 4em 0;
+    background-image: url("../assets/img/bg-pattern-top-mobile.svg"),
+    url("../assets/img/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top left, bottom right;
 }
 
 .social-wrap {
@@ -187,6 +192,10 @@ img {
 }
 
 @media (min-width: 52em) {
+    .social {
+        background-image: url("../assets/img/bg-pattern-top-desktop.svg"),
+        url("../assets/img/bg-pattern-bottom-desktop.svg");
+    }
     .social-row-1 {
         flex-direction: row;
         justify-content: space-between;
