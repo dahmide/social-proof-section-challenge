@@ -1,0 +1,261 @@
+@import "https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap";
+
+:root {
+    --cl-1: #4F214F;
+    --cl-2: #ED69A4;
+    --cl-3: #947A93;
+    --cl-4: #F7F2F7;
+    --cl-5: #FFFFFF;
+
+    --fs-xl: 2.15rem;
+    --fs-lg: 1.25rem;
+    --fs-md: 1rem;
+    --fs-sm: 0.9375rem;
+
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-700: 700;
+
+
+    --mb-xl: 3em;
+    --mb-lg: 1.5em;
+    --mb-md: 1em;
+    --mb-sm: 0.5em;
+    --mb-xs: 0.25em;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--fs-md);
+    font-family: "League Spartan", sans-serif;
+}
+
+h1,
+h2 {
+    color: var(--cl-1);
+    line-height: 0.9;
+}
+
+p {
+    color: var(--cl-1);
+    line-height: 1.4;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Utilities */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/*  */
+.social {
+    min-height: 100vh;
+    padding: 4em 0;
+}
+
+.social-wrap {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.social-row {
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.social-row-1 {
+    margin-bottom: var(--mb-xl);
+}
+
+.social-header {
+    margin-bottom: var(--mb-lg);
+}
+
+.social-header-lead,
+.social-header-text {
+    text-align: center;
+}
+
+.social-header-lead {
+    margin-bottom: var(--mb-sm);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-700);
+}
+
+.social-header-text {
+    max-width: 550px;
+    margin: 0 auto;
+    margin-bottom: var(--mb-xs);
+}
+
+.social-rate-info {
+    background-color: var(--cl-4);
+    margin-bottom: var(--mb-md);
+    border-radius: 10px;
+    padding: 1em 0.5em;
+    flex-direction: column;
+}
+
+.social-rate-icon {
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: var(--mb-md);
+}
+
+.social-rate-star {
+    margin: 0 var(--mb-xs);
+}
+
+.social-rate-text {
+    text-align: center;
+    font-size: var(--fs-lg);
+}
+
+.social-card-item {
+    background-color: var(--cl-1);
+    padding: 2em;
+    margin-bottom: var(--mb-lg);
+    border-radius: 10px;
+}
+
+.social-card-info {
+    margin-bottom: var(--mb-sm);
+}
+
+.social-card-pics {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1em;
+}
+
+.social-card-name {
+    color: var(--cl-5);
+    font-weight: var(--fw-500);
+    font-size: 1.125rem;
+}
+
+.social-card-tags {
+    display: block;
+    color: var(--cl-2);
+    margin-top: var(--mb-xs);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-400);
+}
+
+.social-card-text {
+    color: var(--cl-4);
+}
+
+.social-card-item:last-child,
+.social-rate-info:last-child {
+    margin-bottom: 0;
+}
+
+.social-card-item:last-child {
+    margin-right: 0;
+}
+
+/* Media Queries */
+@media (max-width: 24em) {
+    .social-header-lead {
+        font-size: var(--fs-lg);
+    }
+
+    .social-rate-text {
+        font-size: var(--fs-md);
+    }
+    
+    .social-card-pics {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 52em) {
+    .social-row-1 {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .social-header {
+        margin-right: 2em;
+    }
+
+    .social-header-lead,
+    .social-header-text {
+        text-align: left;
+    }
+
+    .social-header-text {
+        max-width: 400px;
+        margin-bottom: 0;
+    }
+
+    .social-rate-info {
+        flex-direction: row;
+    }
+
+    .social-rate-info:nth-child(1) {
+        transform: translateX(-80px);
+    }
+
+    .social-rate-info:nth-child(2) {
+        transform: translateX(-40px);
+    }
+
+    .social-rate-info:nth-child(3) {
+        transform: translateX(0);
+    }
+
+    .social-rate-icon {
+        margin-inline: 1.5em 3em;
+        margin-bottom: 0;
+    }
+
+    .social-rate-text {
+        width: 100%;
+        text-align: left;
+        margin-left: 1em;
+        font-size: var(--fs-md);
+    }
+
+    .social-row-2 {
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .social-card-item {
+        margin-right: 1.5em;
+        margin-bottom: 0;
+        padding: 2.5em 2em;
+    }
+
+    .social-card-item:nth-child(1) {
+        margin-top: 0;
+    }
+    .social-card-item:nth-child(2) {
+        margin-top: 20px;
+    }
+    .social-card-item:nth-child(3) {
+        margin-top: 40px;
+    }
+
+    .social-card-info {
+        margin-bottom: var(--mb-md);
+    }
+}
